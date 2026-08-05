@@ -23,8 +23,8 @@ cross-reference the indicators.
 
 | # | Case | Type | Platform | Status |
 |---|---|---|---|---|
-| 01 | [LinkedIn Recruiter Scam](./linkedin-recruiter-scam/) | Recruitment / off-platform handoff | LinkedIn | Documented |
-| 02 | [Email Recruitment Scam](./email-recruitment-scam/) | Recruitment / fraudulent hiring | Email | Documented |
+| 01 | [LinkedIn Recruiter Scam](./LinkedIn_recruiter_scam/) | Recruitment / off-platform handoff | LinkedIn | Documented |
+| 02 | [Email Recruitment Scam](./recruiter_email_scam/) | Recruitment / fraudulent hiring | Email | Documented |
 
 > Add new cases as rows here and link to the case directory.
 
@@ -35,10 +35,10 @@ cross-reference the indicators.
 ```
 investigations/
 ├── README.md                       # this file
-├── linkedin-recruiter-scam/
+├── LinkedIn_recruiter_scam/
 │   ├── README.md                   # case write-up
 │   └── evidence/                   # screenshots, headers, etc.
-└── email-recruitment-scam/
+└── recruiter_email_scam/
     ├── README.md
     └── evidence/
 ```
