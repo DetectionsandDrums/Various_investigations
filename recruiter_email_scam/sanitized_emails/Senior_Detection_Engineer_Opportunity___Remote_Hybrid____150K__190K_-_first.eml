@@ -1,0 +1,126 @@
+Delivered-To: [REDACTED_EMAIL]
+Received: by 2002:a05:651c:2211:b0:39c:6b77:b2cb with SMTP id y17csp2746813ljq;
+        Mon, 3 Aug 2026 06:57:54 -0700 (PDT)
+X-Received: by 2002:a17:906:99ce:b0:c1c:1fbf:5d18 with SMTP id a640c23a62f3a-c1fd316d100mr1038228166b.3.1785765474396;
+        Mon, 03 Aug 2026 06:57:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1785765474; cv=none;
+        d=google.com; s=arc-20260327;
+        b=gKKVgZrhr7anuPBnhEZgmVtNYFOT1eX8Vd2VAkltR7fabrYrCnxRMd7U4Bzcg3OhDi
+         ISb38nzuU6srTnF7gne2zYEz9mFNpZCQKvEKlJ8zSSQITjB88sSDbTfq5AnO9mYP7Lz6
+         2x6bSDh9LMmii0OVIaQvV+X9YGD1MWBTYKR3flEZKYeYK9VRkHZEFbQuHrcX5gCc+ZiT
+         9IzGAqCEk6Pl9cizl1VsJI3Q0ILG1yBB3m3PLH4dQqDHDiKicYCpe1qovU2cIEFeas1I
+         IcchHC1BG7wz3ad0wyo28jG0T64OZaTlu4qzr1CGLQ8fCwNlPfFmJwANxI1nilhC1qBJ
+         9n9Q=ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version;
+        bh=tDNBOWini+8HvlRVoG0YhP1QQ73/tRSFG+Yl5ONIR0w=;
+        fh=i4UkQ1pSBIXJzFOobzilx6s/AmCZbD/yuFNH2dyKttw=;
+        b=NguFvPvhzBvi+B86JK25T+B3r/t6BgnEEYwtYB5X+G6wVwbfJsxVi3JO2jar7htcbD
+         8SZvcmALekAValGEVfGLcBWcTqYuv1A8Ntz1rQ7MPNJcba0Okpf7CZD2egQ8NWU/HLIV
+         BWoDMyszZUDcroQ3WpbMBxFYg1ja8Zv1MXTDMSSimhNIhHqgmCXYA/jd7mGKGGGJj/MP
+         tD7yQV+eSqByz63AsORH+m1DqDuyd1v2mk1/3nTStcLmBpHnPJwNIv8Vx94n9CPYMDJb
+         ByVtzwKcCJtFib6ooIHWgKbjXlBmHd3nYVw611VKY+ZCBCrcBmHYJijZYtEFnF/rdmml
+         kqsw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of mashoodsekinat470@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mashoodsekinat470@gmail.com
+Return-Path: <mashoodsekinat470@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-c1fd495efb7sor237973566b.3.2026.08.03.06.57.54
+        for <[REDACTED_EMAIL]>
+        (Google Transport Security);
+        Mon, 03 Aug 2026 06:57:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mashoodsekinat470@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of mashoodsekinat470@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mashoodsekinat470@gmail.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1785765474; x=1786370274;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=tDNBOWini+8HvlRVoG0YhP1QQ73/tRSFG+Yl5ONIR0w=;
+        b=KDoLS4yOUECPl7GROKKaSKbnJ9FlYwM2OvN1FQcStbCjE7T/ITRV2yJ1VZcKViXhFy
+         lGNO6ImofOgif5XyIdG1RHiNMo7VitCP5zhLBVzEHE9/ftD5aVmbOszFt+FLpHzzJjcV
+         Bjm0k1YSKqCHjMFrNRwhfcJda8IdZJA4T29G7Jolo5jvux7tJCUFNxgps0uTd11s8fz8
+         qX7eT4lvsmnK2+M2GYOL34BDrC0Pk71WPstz+j8p0RiKAj3sS2kMcJ7fK6IAnPf5Rhxl
+         FaNAztpP0Oyy3rNivmQDDQlDZxpjbHFEJx3C4Zl/C1IUDfPhDJTPGA5KRbxYgC4cV4wn
+         CSaQ=X-Gm-Message-State: AOJu0Yz+5NYe9C7zCBnEF7Z9boFS8m2YsmBm/YUhO9bBoq/xsVhxba2j
+	9A0n90jagbSUzMM0WsIz4H949U1Y85VY8sSFrcA7wngynZZDQOAIedYxPnucykR0TzpupygE
+X-Gm-Gg: AR+sD112a/0JuoIHaUQ2zRSKDSGJz4mTwHgOegUd92ItFm//dOy1xHw4PO7CGCZ7RIE
+	tB52DcjlogQuMdfzKgaXAmmhg7nxx5KepQT1rkVc6AuUjqTjMF+Q2QM+jvOz4kNLi/u1268bRLA
+	LubtEnEOAcDjoc3o13KywAs4zrL9xesYq2MDvdirjKnddzRvP9aP2heBazjwhNCNMlIWs24hxfm
+	afOLZdF4ndro4TTFScOlEUuqo8Fln6/q/NKZINnUO0CZvf0LUdfYmL1gH0lpQUE1j7nGRqHGmfb
+	f2DTA0nu65MQg09Th91uNoxslDleLfrREI4gmvBXRHASHsSefR990mHu7SKZo2A2oe32KUD9jms
+	T4OLrMpiRjVt/ZU0YDK8fcfiJRWOgOl5TFaFdXjSKVOtJvQ+tJno8nOMKQTCrEXl9s3OHsEoUel
+	HwUDH6bz+qMOw96QyeFfdXRn12QvXfAZnySimrXaLv7pdF8eyJYo33++M/d1A+sYASTVgTtcxl6
+	4DXoJZpErcbP/OiF34cUXNH5KhZx+HJGar1atjsjjosNQZdm5MXzwxqpPfBSzZqggwX-Received: by 2002:a17:907:1b04:b0:c08:580e:899a with SMTP id a640c23a62f3a-c1fe79a5b0amr981804266b.10.1785765473053;
+        Mon, 03 Aug 2026 06:57:53 -0700 (PDT)
+Return-Path: <mashoodsekinat470@gmail.com>
+Received: from mail-ej1-f43.google.com (mail-ej1-f43.google.com. [209.85.218.43])
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-c1fd445433esm573835266b.30.2026.08.03.06.57.52
+        for <[REDACTED_EMAIL]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 03 Aug 2026 06:57:52 -0700 (PDT)
+Received: by mail-ej1-f43.google.com with SMTP id a640c23a62f3a-c169ae1cb26so783989966b.1
+        for <[REDACTED_EMAIL]>; Mon, 03 Aug 2026 06:57:52 -0700 (PDT)
+X-Received: by 2002:a17:907:e84a:b0:c15:f55d:f0d8 with SMTP id
+ a640c23a62f3a-c1fe791c931mr734430766b.4.1785765472711; Mon, 03 Aug 2026
+ 06:57:52 -0700 (PDT)
+MIME-Version: 1.0
+From: mashoodsekinat@executivecareersconnect.com
+Date: Mon, 3 Aug 2026 14:57:39 +0100
+X-Gmail-Original-Message-ID: <CAByTqWvPvQFUrGDAS-XLm1LS7pqGWOa5fKTY8cMwgGGJhe_7qw@mail.gmail.com>
+X-Gm-Features: AUfX_mxI0F-LQWw5lNE1dXTlEKBXwk_jwzHwOqHWH6VGbIUQbqNo1y_IKLJoxVU
+Message-ID: <CAByTqWvPvQFUrGDAS-XLm1LS7pqGWOa5fKTY8cMwgGGJhe_7qw@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Senior_Detection_Engineer_Opportunity_=7C_Remote=2FH?	=?UTF-8?Q?ybrid_=7C_=24150K=E2=80=93=24190K?To: "[REDACTED_EMAIL]" <[REDACTED_EMAIL]>
+Content-Type: multipart/alternative; boundary="000000000000a73b26065824eca2"
+
+--000000000000a73b26065824eca2
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi [REDACTED_NAME],
+
+I came across your profile and your background really stood out to me,
+especially your 13+ years of experience in detection engineering, threat
+research, SIEM engineering, threat hunting, and translating MITRE ATT&CK
+techniques into production-ready detections. Your work across CrowdStrike
+Falcon, Microsoft Sentinel, Carbon Black, Sumo Logic Cloud SIEM, and your
+experience building scalable detection capabilities is particularly
+impressive.
+
+I work as a Reverse Recruiter, meaning I work directly for job seekers
+instead of companies. My role is to help professionals identify strong-fit
+opportunities, connect with hiring managers and recruiters, and improve
+their visibility throughout the hiring process rather than relying only on
+traditional online applications.
+
+I also help support the full application process strategically, including
+positioning, outreach, and application foundation tools designed to
+strengthen a candidate's chances of getting noticed.
+
+I recently came across a Senior Detection Engineer / Threat Research
+opportunity with a growing organization offering approximately $150K=E2=80=93$190K
+total compensation with remote/hybrid flexibility. Based on your experience
+building behavioral detections, threat intelligence integrations, SIEM
+engineering, detection tuning, and adversary focused research, I believe
+you could be an excellent fit.
+
+The role focuses on detection engineering, threat research, SIEM
+optimization, threat hunting, MITRE ATT&CK mapping, and collaborating with
+security operations teams to strengthen enterprise cyber defense areas that
+closely align with your expertise.
+
+Would you be open to hearing more about it?
+
+Best Regards,
+*MASHOOD SEKINAT *
+*REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING
+SPEALCIALIST*
+
+--000000000000a73b26065824eca2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div>Hi [REDACTED_NAME],</div><div dir=3D"auto"><br></div><div dir=3D"auto">I came across your profile and your background really stood out to me, especially your 13+ years of experience in detection engineering, threat research, SIEM engineering, threat hunting, and translating MITRE ATT&amp;CK techniques into production-ready detections. Your work across CrowdStrike Falcon, Microsoft Sentinel, Carbon Black, Sumo Logic Cloud SIEM, and your experience building scalable detection capabilities is particularly impressive.</div><div dir=3D"auto"><br></div><div dir=3D"auto">I work as a Reverse Recruiter, meaning I work directly for job seekers instead of companies. My role is to help professionals identify strong-fit opportunities, connect with hiring managers and recruiters, and improve their visibility throughout the hiring process rather than relying only on traditional online applications.</div><div dir=3D"auto"><br></div><div dir=3D"auto">I also help support the full application process strategically, including positioning, outreach, and application foundation tools designed to strengthen a candidate&#39;s chances of getting noticed.</div><div dir=3D"auto"><br></div><div dir=3D"auto">I recently came across a Senior Detection Engineer / Threat Research opportunity with a growing organization offering approximately $150K=E2=80=93$190K total compensation with remote/hybrid flexibility. Based on your experience building behavioral detections, threat intelligence integrations, SIEM engineering, detection tuning, and adversary focused research, I believe you could be an excellent fit.</div><div dir=3D"auto"><br></div><div dir=3D"auto">The role focuses on detection engineering, threat research, SIEM optimization, threat hunting, MITRE ATT&amp;CK mapping, and collaborating with security operations teams to strengthen enterprise cyber defense areas that closely align with your expertise.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Would you be open to hearing more about it?</div><div><br></div><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div>
+
+--000000000000a73b26065824eca2--

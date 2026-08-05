@@ -1,0 +1,514 @@
+Delivered-To: [REDACTED_EMAIL]
+Received: by 2002:a05:651c:2211:b0:39c:6b77:b2cb with SMTP id y17csp3093444ljq;
+        Mon, 3 Aug 2026 14:42:09 -0700 (PDT)
+X-Received: by 2002:a17:906:4796:b0:c20:2163:4dcb with SMTP id a640c23a62f3a-c2021634f11mr185791366b.8.1785793329176;
+        Mon, 03 Aug 2026 14:42:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1785793329; cv=none;
+        d=google.com; s=arc-20260327;
+        b=qCihJYkDEpTfbVYg3v9BQHyyreh2lxSgYiIN6PX/uBS0vz8XuAlDnAKDm0El4bfhgZ
+         HZGiRqmBeL609hhMCZlauOTeBAY36HW0wqEtkMkGz4cZKAAbrQ4s5/xuG6QCH+SgeJ99
+         CkikaxVrIGyK81rb0FdN2p0P6mkrJHFNELhx8YwzAKvdTRG57gLcHNqF6FxkZF/EQTvw
+         MBczFp5W/S+Mow3ddE/U0iSHXIBZTmUZ3AiEd7rVK6dkXVm/Dm1lDjYEqJBjF9AnmjFJ
+         8umMz1Wx4K9dYX25sVLdgbn4w19sMQzwtampmCBlHUmHKfi4BPvTmbzTZtjo6og7otx5
+         wQ+Q=ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version;
+        bh=BFXxH0BLFx7sZDvAPkJ9KYWFQkrGDbT4sVsahABm4zw=;
+        fh=w4Q6mCev0loAfvIydfksyDCFyKZ8cwD2yJGPraZRYzs=;
+        b=V2TWk04JuEzEXczVbTU0HJt6juL/fvSsAy1CXqi1RlXp7+1Sj5cQO9zZWu1CH9oKFk
+         ExHY2/l9idc3/gU6oHOFtqQKSNzYIt+11amScDC7wCMaVg+KZgdf7bNdf7ICA9Fp5NFH
+         iWJ97YlHU+UoTAssCG/wthHzGHPcVu6Vp1n2IxUh7v3e/IWUvxJR3FBgxC3P58TPMVA5
+         Kjaw6xQ+iQfd/ivj6A3YvdS7m14begBnnHmITLXFa9OaV9faZd+yXM0b8JtTrnNiyyZp
+         NETbNt6/mn7jiAj/6ZDydSVmrOOznn9kiWPIAw4bC9aKgdWeK9TaHAj1Vw/yTB8ot4F9
+         Isvw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=pass (google.com: domain of mashoodsekinat470@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mashoodsekinat470@gmail.com
+Return-Path: <mashoodsekinat470@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-c1fd46aabb7sor233191066b.21.2026.08.03.14.42.09
+        for <[REDACTED_EMAIL]>
+        (Google Transport Security);
+        Mon, 03 Aug 2026 14:42:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of mashoodsekinat470@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       spf=pass (google.com: domain of mashoodsekinat470@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=mashoodsekinat470@gmail.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1785793329; x=1786398129;
+        h=content-type:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to:content-type;
+        bh=BFXxH0BLFx7sZDvAPkJ9KYWFQkrGDbT4sVsahABm4zw=;
+        b=rBhPZaNQPJ6tRm1mDQX1pOQJmm2mvoCFvwtK78Mqonxu0RTFA/EmWbP8unxTtCbzJD
+         5wHRUr/EbS8yXUZDj8SkJGHfxJ3NJKgKDHglI4+4yhpsscIXPuih2542Ya4+4DT1/nJQ
+         gY4ZNryd1fHWFK41UuKqBsUFq27p48849p/KojiXIAaTfRGv36Sic+lLwjYB75LTMu8m
+         JWOLJO7V3AavkXSfhTxSmImreL1McUko5ixKymEscv37n9iKMl+BNZtEkTPyM9HrCH5c
+         0CsVzfKWO+Q8KlekBzsbNongl7f+sUc741n0ZufLkD/vqPLogcq0Z0artklGTBAyY1Zn
+         eqdg=X-Gm-Message-State: AOJu0Yz9fRnzf/jf1ZWFQQmutkvS0r1C7a6BZPlKKfIvveEsvxsiNY65
+	E26EAhBI+4AF2JHhVmGcVkjZerFpmIvGPJiDtggYrsHJAd+rRfKNzUaR3KYw+2xxqQjHG/EL
+X-Gm-Gg: AR+sD10PKSlwel4CO3pRFSH23KXA4Q9gR5LOviR2Obi1OZiYU496+xv817wWBjn724x
+	KXPJjNJpMvTVPeQRkze6p2mM7k9rZLEKTFsZck4Vt/1bAzdnHdEwZEBHSSawnsAwG0UdwE5HCl5
+	gMNqtQdnIKb4c9+dPObXfY/7E6Rj61gfWCbWTqLRASuFZKDrWKJo6ojz/4Ifu/NWElOh4bIoqOO
+	Dz7zW5+6MuWUIlIMBLwKZz9bhOD805cCsKB8JB9OqmfubCbTxq1wMOwBidw3qEjKkawcdp88G9e
+	0z3lXn9UgSMiKmIXYHDnK4KUuxN50lYMNTm39iRy2frhOG9er9Qsh+V9tXBT0yt4bbQ5QyF/hfw
+	4qH3S0gDkRRlcc2IRVpv9wZ6C3ZjwduAzl8Ulmdl/wUo5YxIr2XuW4wSUGtnMEasTY8JsUbFpAl
+	cuqLPd7LCzaFbEzS1TIt4IZKRIWk3vQsIXc3zGOBR7Hh1JIEwZ7q5FHe6vkbVfsg4yuHmBNS/3y
+	uQdT9xTCqhqLl85CH9BhXt/hNCJohIaDND1lJVYWZXQMqw+hRzIdVoX-Received: by 2002:a17:907:eac:b0:c1c:23f9:5f17 with SMTP id a640c23a62f3a-c1fe80caf0emr905678766b.22.1785793328348;
+        Mon, 03 Aug 2026 14:42:08 -0700 (PDT)
+Return-Path: <mashoodsekinat470@gmail.com>
+Received: from mail-ed1-f54.google.com (mail-ed1-f54.google.com. [209.85.208.54])
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-c1fd46781ddsm561721666b.62.2026.08.03.14.42.08
+        for <[REDACTED_EMAIL]>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 03 Aug 2026 14:42:08 -0700 (PDT)
+Received: by mail-ed1-f54.google.com with SMTP id 4fb4d7f45d1cf-69c1220bd51so5840506a12.3
+        for <[REDACTED_EMAIL]>; Mon, 03 Aug 2026 14:42:08 -0700 (PDT)
+X-Received: by 2002:a17:907:9404:b0:c0b:e9c1:93a7 with SMTP id
+ a640c23a62f3a-c1fe8109de3mr902812366b.29.1785793327865; Mon, 03 Aug 2026
+ 14:42:07 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAByTqWvPvQFUrGDAS-XLm1LS7pqGWOa5fKTY8cMwgGGJhe_7qw@mail.gmail.com>
+ <CA+C4FyxAoYNCVgCz+qqkV=2td4JKa1ew=j2e0Y3VLVaCBnqDHg@mail.gmail.com>
+ <CAByTqWvYM-V_NHiPwUZX1FPRm6mO+8vDEy9bv9D=Xv6Ln+BEQw@mail.gmail.com>
+ <CA+C4Fyzq0wa7XqvR5K0Q27Ph64VVSzfoXh+28zNHcAChzk7mFQ@mail.gmail.com>
+ <CAByTqWtCLZeBsK9r573h1P484VuFTm_VWWA=UZ8aG7z0S2k-_w@mail.gmail.com>
+ <CA+C4FyxHCjmziForVmHaN4fnpL9Fp9qdF9QtvHkUCt=1+XhfYQ@mail.gmail.com>
+ <CAByTqWuGzOd4EkRsAgaBW4Rb_jWXnJkCQn7PCUvThFORG3Xq5A@mail.gmail.com>
+ <CA+C4FyyDhyWumiJ0o6s_52D7OWobtiB7XK2650CBkbtbrRk3xw@mail.gmail.com>
+ <CAByTqWtBQnpiaC4pgDksKNLnqVe1mjZBZa3N4z=tA3Dvc8RiTw@mail.gmail.com>
+ <CA+C4Fyy7P87zaXDoi1jg9e7y6iSTsZDrTaHySZbsSw6jpLJLoA@mail.gmail.com>
+ <CAByTqWvuoAR+2KSG25XbJYq7fZ8DJZmaDiCTOXRndSt11yr5Ww@mail.gmail.com>
+ <CA+C4FywRZSWeZ1y=f8fNMw35tMrsXKkFKE3vY+nP0MEuEfSNcQ@mail.gmail.com>
+ <CAByTqWs7iWSN+P9hJgMK3cbc+qc72DZh1EHD8Tx6YjsQ+9Nc9g@mail.gmail.com> <CA+C4FyxJ8YOPcxbo6=-UM1-peHtM_JFCJbmfXMX-qOz4Gg6_wg@mail.gmail.com>
+In-Reply-To: <CA+C4FyxJ8YOPcxbo6=-UM1-peHtM_JFCJbmfXMX-qOz4Gg6_wg@mail.gmail.com>
+From: mashoodsekinat@executivecareersconnect.com
+Date: Mon, 3 Aug 2026 22:41:56 +0100
+X-Gmail-Original-Message-ID: <CAByTqWs+oaOrqj=Xm6fWM4kEPdn5N42B0NH5okTGPV_4zV3q9g@mail.gmail.com>
+X-Gm-Features: AUfX_mxRKW904JL_ehYemWyldZUUa-L4Uw85pSj8ohGsoMyKKljGQcgV80GGxEo
+Message-ID: <CAByTqWs+oaOrqj=Xm6fWM4kEPdn5N42B0NH5okTGPV_4zV3q9g@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_Senior_Detection_Engineer_Opportunity_=7C_Remote=2FH?	=?UTF-8?Q?ybrid_=7C_=24150K=E2=80=93=24190K?To: "[REDACTED_NAME]" <[REDACTED_EMAIL]>
+Content-Type: multipart/alternative; boundary="000000000000f3245f06582b684d"
+
+--000000000000f3245f06582b684d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+I'm glad you're ready to move forward, and I'm looking forward to working
+with you.
+
+Before I begin your job search campaign, I'd like to confirm the payment
+arrangement so we both have a clear understanding of the process from the
+outset.
+
+Payment Option =E2=80=93 Upfront Payment
+
+The recruitment service is provided on a full upfront payment basis. Once
+payment is received, I will immediately begin working on your campaign and
+provide comprehensive support throughout the engagement.
+
+Your investment includes:
+
+=E2=80=A2 A targeted resume review and optimization tailored to the positions
+you're pursuing.
+=E2=80=A2 Strategic positioning of your professional profile to improve visibility
+with recruiters and hiring managers.
+=E2=80=A2 Development and execution of a personalized job search campaign focused
+on your target roles, while also identifying additional opportunities that
+align with your experience, location, compensation goals, and preferences.
+=E2=80=A2 Recruiter outreach and application strategy designed to maximize
+interview opportunities.
+=E2=80=A2 Ongoing guidance, communication, and support throughout the hiring
+process.
+=E2=80=A2 Any resume refinements, strategy adjustments, or campaign updates needed
+during our engagement at no additional cost.
+
+There are no hidden fees or unexpected charges. Everything outlined above
+is included in the agreed service fee, so you'll know exactly what to
+expect before we begin.
+
+Are you comfortable proceeding with the full upfront payment?
+
+Once payment is confirmed, I'll begin working on your resume optimization
+and job search campaign immediately.
+
+I look forward to helping you secure the right opportunity.
+
+Best Regards,
+*MASHOOD SEKINAT *
+*REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING
+SPEALCIALIST*
+
+
+
+On Mon, 3 Aug 2026, 22:02 [REDACTED_NAME], <[REDACTED_EMAIL]> wrote:
+
+> Yes, please proceed.
+>
+>
+> Regards,
+>
+>
+> *[REDACTED_NAME]*
+>
+>
+> On Mon, Aug 3, 2026 at 4:59=E2=80=AFPM <mashoodsekinat@executivecareersconnect.com>
+> wrote:
+>
+>> Thanks for sending over your resume I've received it and reviewed it.
+>>
+>> Your background is impressive and aligns very well with the role we
+>> discussed. I can see strong matches in:
+>>
+>> =C2=B7 Detection engineering across Carbon Black, CrowdStrike, Sentinel, and
+>> Sumo Logic
+>> =C2=B7 SIEM platform ownership and consolidation (RSA, QRadar, Sumo Logic)
+>> =C2=B7 MITRE ATT&CK mapping and threat informed detection
+>> =C2=B7 Cloud and identity telemetry (AWS, Azure AD/Entra, Okta)
+>> =C2=B7 Python automation and Sigma rule portability
+>>
+>> Next Steps:
+>>
+>> 1. Targeted Resume - I'll rework your resume to align it more closely
+>> with the specific role, emphasizing the most relevant experience and
+>> outcomes.
+>> 2. Recruiter Dashboard =E2=80=94 I'll cast your profile into my recruiter
+>> dashboard to increase visibility and connect you with decision-makers.
+>> 3. Campaign Launch =E2=80=94 I'll begin actively campaigning on your behalf
+>> immediately for this role and others that match your criteria
+>> (remote/hybrid in Metro Detroit, $120K=E2=80=93$160K, 5=E2=80=9310% bonus). Once you
+>> confirm, I'll start the job search right away no delays.
+>>
+>> Before I proceed, just confirm:
+>>
+>> =C2=B7 Are you ready for me to move forward immediately with the targeted
+>> resume and campaign?
+>> =C2=B7 Any additional preferences or deal-breakers I should know about before
+>> I start?
+>>
+>> Once you give the green light, I'll get started right away.
+>>
+>> Best Regards,
+>> *MASHOOD SEKINAT *
+>> *REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING
+>> SPEALCIALIST*
+>>
+>>
+>>
+>> On Mon, 3 Aug 2026, 21:21 [REDACTED_NAME], <[REDACTED_EMAIL]> wrote:
+>>
+>>>
+>>> Regards,
+>>>
+>>>
+>>> *[REDACTED_NAME]*
+>>>
+>>>
+>>>
+>>> On Mon, Aug 3, 2026 at 2:44=E2=80=AFPM <
+>>> mashoodsekinat@executivecareersconnect.com> wrote:
+>>>
+>>>> Great since you've already shared the roles you're interested in and
+>>>> you're open to my support, here's what I'd like to do next:
+>>>>
+>>>> Step 1 =E2=80=94 Send me your current resume
+>>>> I'll review it and make sure it's positioned effectively for the
+>>>> opportunities you're targeting, highlighting the experience and
+>>>> achievements that align best with those roles.
+>>>>
+>>>> Step 2 =E2=80=94 I'll handle the initial outreach
+>>>> Once your resume is ready, I'll work on connecting you with the right
+>>>> hiring contacts and positioning you strategically for relevant
+>>>> opportunities.
+>>>>
+>>>> Step 3 =E2=80=94 Broader job search support
+>>>> Beyond these opportunities, I'll also start actively identifying other
+>>>> strong-fit roles that match your criteria remote or hybrid in Metro
+>>>> Detroit, $120K=E2=80=93$160K compensation, and the 5=E2=80=9310% bonus range you mentioned.
+>>>> My goal is to give you options and help you land the right role, not just
+>>>> any role.
+>>>>
+>>>> If that sounds good, please send over your resume when you have a
+>>>> moment, and we'll get started.
+>>>>
+>>>> Looking forward to working with you.
+>>>>
+>>>> Best Regards,
+>>>> *MASHOOD SEKINAT *
+>>>> *REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE
+>>>> BRANDING SPEALCIALIST*
+>>>>
+>>>>
+>>>>
+>>>> On Mon, 3 Aug 2026, 19:01 [REDACTED_NAME], <[REDACTED_EMAIL]> wrote:
+>>>>
+>>>>> Yes, I'm open to continuing the conversation.
+>>>>>
+>>>>> Regards,
+>>>>>
+>>>>>
+>>>>> *[REDACTED_NAME]*
+>>>>>
+>>>>> On Mon, Aug 3, 2026 at 1:53=E2=80=AFPM <
+>>>>> mashoodsekinat@executivecareersconnect.com> wrote:
+>>>>>
+>>>>>> Thanks for getting back to me and good to know your preferences on
+>>>>>> remote vs. hybrid. I'll keep that in mind as I evaluate opportunities that
+>>>>>> fit your criteria.
+>>>>>>
+>>>>>> Just to make sure I'm being completely transparent  I'm a Reverse
+>>>>>> Recruiter, which means I work for you, not for the hiring company. Unlike
+>>>>>> traditional recruiters who are paid by employers to fill roles, I partner
+>>>>>> directly with job seekers to help them navigate the job market more
+>>>>>> strategically and land roles that align with their goals.
+>>>>>>
+>>>>>> Here's what that looks like in practice:
+>>>>>>
+>>>>>> =C2=B7 Opportunity identification  I actively surface strong-fit,
+>>>>>> high-quality roles that match your experience, compensation targets, and
+>>>>>> location preferences (like the remote/hybrid flexibility you mentioned).
+>>>>>> =C2=B7 Direct connection strategy Instead of relying only on online
+>>>>>> applications, I help you get in front of hiring managers and recruiters
+>>>>>> through targeted outreach and relationship building.
+>>>>>> =C2=B7 Positioning & application support I help refine your narrative,
+>>>>>> tailor your materials, and provide tools to strengthen your visibility and
+>>>>>> competitiveness throughout the hiring process.
+>>>>>> =C2=B7 Ongoing strategic guidance  From interview prep to offer
+>>>>>> negotiation, I support you at every stage to make sure you're putting your
+>>>>>> best foot forward.
+>>>>>>
+>>>>>> The opportunity I mentioned is a real one, but more importantly, my
+>>>>>> goal is to help you find the right opportunity whether that's this one or
+>>>>>> another that fits your criteria. The value I add is helping you move
+>>>>>> through the job search more efficiently and with greater visibility than
+>>>>>> going it alone.
+>>>>>>
+>>>>>> Would you be open to continuing the conversation? If so, I'd love to
+>>>>>> learn a bit more about what you're looking for in your next role and share
+>>>>>> how I can support you in landing it.
+>>>>>>
+>>>>>> Looking forward to hearing from you.
+>>>>>>
+>>>>>> Best Regards,
+>>>>>> *MASHOOD SEKINAT *
+>>>>>> *REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE
+>>>>>> BRANDING SPEALCIALIST*
+>>>>>>
+>>>>>>
+>>>>>>
+>>>>>> On Mon, 3 Aug 2026, 16:58 [REDACTED_NAME], <[REDACTED_EMAIL]>
+>>>>>> wrote:
+>>>>>>
+>>>>>>>
+>>>>>>> I'd prefer remote. I'm open to hybrid in the Metro Detroit area.
+>>>>>>>
+>>>>>>> I'm open to bonuses in the 5 to 10% range.
+>>>>>>>
+>>>>>>>
+>>>>>>> Regards,
+>>>>>>>
+>>>>>>>
+>>>>>>> *[REDACTED_NAME]*
+>>>>>>>
+>>>>>>>
+>>>>>>> On Mon, Aug 3, 2026 at 11:51=E2=80=AFAM <
+>>>>>>> mashoodsekinat@executivecareersconnect.com> wrote:
+>>>>>>>
+>>>>>>>> Apologies regarding that, it's a  mistake on my end.
+>>>>>>>>
+>>>>>>>> Kindly let me know your preferred location, bonus expectations and
+>>>>>>>> if you are currently targeting remote, hybrid and or onsite roles .
+>>>>>>>>  Once I have that ,it will help me navigate your target more
+>>>>>>>> precisely.
+>>>>>>>>
+>>>>>>>> Best Regards,
+>>>>>>>> *MASHOOD SEKINAT *
+>>>>>>>> *REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE
+>>>>>>>> BRANDING SPEALCIALIST*
+>>>>>>>>
+>>>>>>>>
+>>>>>>>>
+>>>>>>>> On Mon, 3 Aug 2026, 16:32 [REDACTED_NAME], <[REDACTED_EMAIL]>
+>>>>>>>> wrote:
+>>>>>>>>
+>>>>>>>>> Your last email is a bit confusing counting the one before said
+>>>>>>>>> this:
+>>>>>>>>>
+>>>>>>>>> I recently came across a Senior Detection Engineer / Threat
+>>>>>>>>>> Research opportunity with a growing organization offering approximately
+>>>>>>>>>> $150K=E2=80=93$190K total compensation with remote/hybrid flexibility. Based on
+>>>>>>>>>> your experience building behavioral detections, threat intelligence
+>>>>>>>>>> integrations, SIEM engineering, detection tuning, and adversary focused
+>>>>>>>>>> research, I believe you could be an excellent fit.
+>>>>>>>>>>
+>>>>>>>>>> The role focuses on detection engineering, threat research, SIEM
+>>>>>>>>>> optimization, threat hunting, MITRE ATT&CK mapping, and collaborating with
+>>>>>>>>>> security operations teams to strengthen enterprise cyber defense areas that
+>>>>>>>>>> closely align with your expertise.
+>>>>>>>>>>
+>>>>>>>>>
+>>>>>>>>>
+>>>>>>>>>
+>>>>>>>>> Regards,
+>>>>>>>>>
+>>>>>>>>>
+>>>>>>>>> *[REDACTED_NAME]*
+>>>>>>>>>
+>>>>>>>>> On Mon, Aug 3, 2026 at 11:05=E2=80=AFAM <
+>>>>>>>>> mashoodsekinat@executivecareersconnect.com> wrote:
+>>>>>>>>>
+>>>>>>>>>> Great! Before we move forward, I'd like to better understand your
+>>>>>>>>>> preferences so I can target the right opportunities.
+>>>>>>>>>>
+>>>>>>>>>> Could you let me know:
+>>>>>>>>>>
+>>>>>>>>>> - Which role(s) are you most interested in (e.g., Accounts
+>>>>>>>>>> Receivable, Collections, Customer Service, Administrative Support, Training
+>>>>>>>>>> Coordinator, etc.)?
+>>>>>>>>>> - Are there any specific companies you'd like me to target on
+>>>>>>>>>> your behalf?
+>>>>>>>>>>
+>>>>>>>>>> This will help me focus on opportunities that best align with
+>>>>>>>>>> your goals.
+>>>>>>>>>>
+>>>>>>>>>> Best Regards,
+>>>>>>>>>> *MASHOOD SEKINAT *
+>>>>>>>>>> *REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE
+>>>>>>>>>> BRANDING SPEALCIALIST*
+>>>>>>>>>>
+>>>>>>>>>>
+>>>>>>>>>>
+>>>>>>>>>> On Mon, 3 Aug 2026, 15:43 [REDACTED_NAME], <[REDACTED_EMAIL]>
+>>>>>>>>>> wrote:
+>>>>>>>>>>
+>>>>>>>>>>> Hi Mashood,
+>>>>>>>>>>>
+>>>>>>>>>>> Expected salary range is $160,000/year.
+>>>>>>>>>>>
+>>>>>>>>>>> Target level is Senior.
+>>>>>>>>>>>
+>>>>>>>>>>> Thanks.
+>>>>>>>>>>>
+>>>>>>>>>>> Regards,
+>>>>>>>>>>>
+>>>>>>>>>>> [REDACTED_NAME]
+>>>>>>>>>>>
+>>>>>>>>>>>
+>>>>>>>>>>>
+>>>>>>>>>>> On Mon, Aug 3, 2026 at 10:32=E2=80=AFAM <
+>>>>>>>>>>> mashoodsekinat@executivecareersconnect.com> wrote:
+>>>>>>>>>>>
+>>>>>>>>>>>> Thank you for your response. I'm glad to hear that you're open
+>>>>>>>>>>>> to exploring this further.
+>>>>>>>>>>>>
+>>>>>>>>>>>> To help align you with the most relevant opportunities through
+>>>>>>>>>>>> my reverse recruiting support, could you please share the following:
+>>>>>>>>>>>>
+>>>>>>>>>>>> 1. Expected salary range for your next role
+>>>>>>>>>>>> 2. Target level you are aiming for (e.g., Entry-Level,
+>>>>>>>>>>>> Mid-Level, Manager, Senior, or Executive)
+>>>>>>>>>>>>
+>>>>>>>>>>>> Once I receive that information, I'll be able to identify and
+>>>>>>>>>>>> share positions that best align with your background, experience, and
+>>>>>>>>>>>> career goals including the Senior Detection Engineer role I mentioned
+>>>>>>>>>>>> earlier.
+>>>>>>>>>>>>
+>>>>>>>>>>>> Looking forward to your reply,
+>>>>>>>>>>>>
+>>>>>>>>>>>> Best Regards,
+>>>>>>>>>>>> *MASHOOD SEKINAT *
+>>>>>>>>>>>> *REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST |
+>>>>>>>>>>>> EXECUTIVE BRANDING SPEALCIALIST*
+>>>>>>>>>>>>
+>>>>>>>>>>>>
+>>>>>>>>>>>>
+>>>>>>>>>>>> On Mon, 3 Aug 2026, 15:18 [REDACTED_NAME], <[REDACTED_EMAIL]>
+>>>>>>>>>>>> wrote:
+>>>>>>>>>>>>
+>>>>>>>>>>>>> Hi Mashood,
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> I am interested in hearing more about this role.
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> Thanks.
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> Regards,
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> *[REDACTED_NAME]*
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>
+>>>>>>>>>>>>> On Mon, Aug 3, 2026 at 9:57=E2=80=AFAM <
+>>>>>>>>>>>>> mashoodsekinat@executivecareersconnect.com> wrote:
+>>>>>>>>>>>>>
+>>>>>>>>>>>>>> Hi [REDACTED_NAME],
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> I came across your profile and your background really stood
+>>>>>>>>>>>>>> out to me, especially your 13+ years of experience in detection
+>>>>>>>>>>>>>> engineering, threat research, SIEM engineering, threat hunting, and
+>>>>>>>>>>>>>> translating MITRE ATT&CK techniques into production-ready detections. Your
+>>>>>>>>>>>>>> work across CrowdStrike Falcon, Microsoft Sentinel, Carbon Black, Sumo
+>>>>>>>>>>>>>> Logic Cloud SIEM, and your experience building scalable detection
+>>>>>>>>>>>>>> capabilities is particularly impressive.
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> I work as a Reverse Recruiter, meaning I work directly for
+>>>>>>>>>>>>>> job seekers instead of companies. My role is to help professionals identify
+>>>>>>>>>>>>>> strong-fit opportunities, connect with hiring managers and recruiters, and
+>>>>>>>>>>>>>> improve their visibility throughout the hiring process rather than relying
+>>>>>>>>>>>>>> only on traditional online applications.
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> I also help support the full application process
+>>>>>>>>>>>>>> strategically, including positioning, outreach, and application foundation
+>>>>>>>>>>>>>> tools designed to strengthen a candidate's chances of getting noticed.
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> I recently came across a Senior Detection Engineer / Threat
+>>>>>>>>>>>>>> Research opportunity with a growing organization offering approximately
+>>>>>>>>>>>>>> $150K=E2=80=93$190K total compensation with remote/hybrid flexibility. Based on
+>>>>>>>>>>>>>> your experience building behavioral detections, threat intelligence
+>>>>>>>>>>>>>> integrations, SIEM engineering, detection tuning, and adversary focused
+>>>>>>>>>>>>>> research, I believe you could be an excellent fit.
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> The role focuses on detection engineering, threat research,
+>>>>>>>>>>>>>> SIEM optimization, threat hunting, MITRE ATT&CK mapping, and collaborating
+>>>>>>>>>>>>>> with security operations teams to strengthen enterprise cyber defense areas
+>>>>>>>>>>>>>> that closely align with your expertise.
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> Would you be open to hearing more about it?
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>> Best Regards,
+>>>>>>>>>>>>>> *MASHOOD SEKINAT *
+>>>>>>>>>>>>>> *REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST |
+>>>>>>>>>>>>>> EXECUTIVE BRANDING SPEALCIALIST*
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>
+
+--000000000000f3245f06582b684d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div>I&#39;m glad you&#39;re ready to move forward, and I&#39;m looking forward to working with you.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Before I begin your job search campaign, I&#39;d like to confirm the payment arrangement so we both have a clear understanding of the process from the outset.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Payment Option =E2=80=93 Upfront Payment</div><div dir=3D"auto"><br></div><div dir=3D"auto">The recruitment service is provided on a full upfront payment basis. Once payment is received, I will immediately begin working on your campaign and provide comprehensive support throughout the engagement.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Your investment includes:</div><div dir=3D"auto"><br></div><div dir=3D"auto">=E2=80=A2 A targeted resume review and optimization tailored to the positions you&#39;re pursuing.</div><div dir=3D"auto">=E2=80=A2 Strategic positioning of your professional profile to improve visibility with recruiters and hiring managers.</div><div dir=3D"auto">=E2=80=A2 Development and execution of a personalized job search campaign focused on your target roles, while also identifying additional opportunities that align with your experience, location, compensation goals, and preferences.</div><div dir=3D"auto">=E2=80=A2 Recruiter outreach and application strategy designed to maximize interview opportunities.</div><div dir=3D"auto">=E2=80=A2 Ongoing guidance, communication, and support throughout the hiring process.</div><div dir=3D"auto">=E2=80=A2 Any resume refinements, strategy adjustments, or campaign updates needed during our engagement at no additional cost.</div><div dir=3D"auto"><br></div><div dir=3D"auto">There are no hidden fees or unexpected charges. Everything outlined above is included in the agreed service fee, so you&#39;ll know exactly what to expect before we begin.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Are you comfortable proceeding with the full upfront payment?</div><div dir=3D"auto"><br></div><div dir=3D"auto">Once payment is confirmed, I&#39;ll begin working on your resume optimization and job search campaign immediately.</div><div dir=3D"auto"><br></div><div dir=3D"auto">I look forward to helping you secure the right opportunity.</div><div><br></div><div data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div><br><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 3 Aug 2026, 22:02 [REDACTED_NAME], &lt;<a href=3D"mailto:[REDACTED_EMAIL]">[REDACTED_EMAIL]</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div>Yes, please proceed.=C2=A0</div><div><br></div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><span style=3D"font-family:verdana,sans-serif">Regards, </span><br><br><i style=3D"font-family:verdana,sans-serif"><br>[REDACTED_NAME]</i></div></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Aug 3, 2026 at 4:59=E2=80=AFPM &lt;<a href=3D"mailto:mashoodsekinat@executivecareersconnect.com" target=3D"_blank" rel=3D"noreferrer">mashoodsekinat@executivecareersconnect.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div>Thanks for sending over your resume I&#39;ve received it and reviewed it.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Your background is impressive and aligns very well with the role we discussed. I can see strong matches in:</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=B7 Detection engineering across Carbon Black, CrowdStrike, Sentinel, and Sumo Logic</div><div dir=3D"auto">=C2=B7 SIEM platform ownership and consolidation (RSA, QRadar, Sumo Logic)</div><div dir=3D"auto">=C2=B7 MITRE ATT&amp;CK mapping and threat informed detection</div><div dir=3D"auto">=C2=B7 Cloud and identity telemetry (AWS, Azure AD/Entra, Okta)</div><div dir=3D"auto">=C2=B7 Python automation and Sigma rule portability</div><div dir=3D"auto"><br></div><div dir=3D"auto">Next Steps:</div><div dir=3D"auto"><br></div><div dir=3D"auto">1. Targeted Resume - I&#39;ll rework your resume to align it more closely with the specific role, emphasizing the most relevant experience and outcomes.</div><div dir=3D"auto">2. Recruiter Dashboard =E2=80=94 I&#39;ll cast your profile into my recruiter dashboard to increase visibility and connect you with decision-makers.</div><div dir=3D"auto">3. Campaign Launch =E2=80=94 I&#39;ll begin actively campaigning on your behalf immediately for this role and others that match your criteria (remote/hybrid in Metro Detroit, $120K=E2=80=93$160K, 5=E2=80=9310% bonus). Once you confirm, I&#39;ll start the job search right away no delays.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Before I proceed, just confirm:</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=B7 Are you ready for me to move forward immediately with the targeted resume and campaign?</div><div dir=3D"auto">=C2=B7 Any additional preferences or deal-breakers I should know about before I start?</div><div dir=3D"auto"><br></div><div dir=3D"auto">Once you give the green light, I&#39;ll get started right away.</div><div><br></div><div><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 3 Aug 2026, 21:21 [REDACTED_NAME], &lt;<a href=3D"mailto:[REDACTED_EMAIL]" target=3D"_blank" rel=3D"noreferrer">[REDACTED_EMAIL]</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div><br clear=3D"all"></div><div><div dir=3D"ltr" class=3D"gmail_signature"><span style=3D"font-family:verdana,sans-serif">Regards, </span><br><br><i style=3D"font-family:verdana,sans-serif"><br>[REDACTED_NAME]</i><br style=3D"font-family:verdana,sans-serif"><br></div></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Aug 3, 2026 at 2:44=E2=80=AFPM &lt;<a href=3D"mailto:mashoodsekinat@executivecareersconnect.com" rel=3D"noreferrer noreferrer" target=3D"_blank">mashoodsekinat@executivecareersconnect.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div>Great since you&#39;ve already shared the roles you&#39;re interested in and you&#39;re open to my support, here&#39;s what I&#39;d like to do next:</div><div dir=3D"auto"><br></div><div dir=3D"auto">Step 1 =E2=80=94 Send me your current resume</div><div dir=3D"auto">I&#39;ll review it and make sure it&#39;s positioned effectively for the opportunities you&#39;re targeting, highlighting the experience and achievements that align best with those roles.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Step 2 =E2=80=94 I&#39;ll handle the initial outreach</div><div dir=3D"auto">Once your resume is ready, I&#39;ll work on connecting you with the right hiring contacts and positioning you strategically for relevant opportunities.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Step 3 =E2=80=94 Broader job search support</div><div dir=3D"auto">Beyond these opportunities, I&#39;ll also start actively identifying other strong-fit roles that match your criteria remote or hybrid in Metro Detroit, $120K=E2=80=93$160K compensation, and the 5=E2=80=9310% bonus range you mentioned. My goal is to give you options and help you land the right role, not just any role.</div><div dir=3D"auto"><br></div><div dir=3D"auto">If that sounds good, please send over your resume when you have a moment, and we&#39;ll get started.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Looking forward to working with you.</div><div><br></div><div><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 3 Aug 2026, 19:01 [REDACTED_NAME], &lt;<a href=3D"mailto:[REDACTED_EMAIL]" rel=3D"noreferrer noreferrer" target=3D"_blank">[REDACTED_EMAIL]</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Yes, I&#39;m open to continuing the conversation.=C2=A0</div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signature"><span style=3D"font-family:verdana,sans-serif">Regards, </span><br><br><i style=3D"font-family:verdana,sans-serif"><br>[REDACTED_NAME]</i></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Aug 3, 2026 at 1:53=E2=80=AFPM &lt;<a href=3D"mailto:mashoodsekinat@executivecareersconnect.com" rel=3D"noreferrer noreferrer noreferrer" target=3D"_blank">mashoodsekinat@executivecareersconnect.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div>Thanks for getting back to me and good to know your preferences on remote vs. hybrid. I&#39;ll keep that in mind as I evaluate opportunities that fit your criteria.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Just to make sure I&#39;m being completely transparent=C2=A0 I&#39;m a Reverse Recruiter, which means I work for you, not for the hiring company. Unlike traditional recruiters who are paid by employers to fill roles, I partner directly with job seekers to help them navigate the job market more strategically and land roles that align with their goals.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Here&#39;s what that looks like in practice:</div><div dir=3D"auto"><br></div><div dir=3D"auto">=C2=B7 Opportunity identification=C2=A0 I actively surface strong-fit, high-quality roles that match your experience, compensation targets, and location preferences (like the remote/hybrid flexibility you mentioned).</div><div dir=3D"auto">=C2=B7 Direct connection strategy Instead of relying only on online applications, I help you get in front of hiring managers and recruiters through targeted outreach and relationship building.</div><div dir=3D"auto">=C2=B7 Positioning &amp; application support I help refine your narrative, tailor your materials, and provide tools to strengthen your visibility and competitiveness throughout the hiring process.</div><div dir=3D"auto">=C2=B7 Ongoing strategic guidance=C2=A0 From interview prep to offer negotiation, I support you at every stage to make sure you&#39;re putting your best foot forward.</div><div dir=3D"auto"><br></div><div dir=3D"auto">The opportunity I mentioned is a real one, but more importantly, my goal is to help you find the right opportunity whether that&#39;s this one or another that fits your criteria. The value I add is helping you move through the job search more efficiently and with greater visibility than going it alone.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Would you be open to continuing the conversation? If so, I&#39;d love to learn a bit more about what you&#39;re looking for in your next role and share how I can support you in landing it.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Looking forward to hearing from you.</div><div><br></div><div><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 3 Aug 2026, 16:58 [REDACTED_NAME], &lt;<a href=3D"mailto:[REDACTED_EMAIL]" rel=3D"noreferrer noreferrer noreferrer" target=3D"_blank">[REDACTED_EMAIL]</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div><br></div><div>I&#39;d prefer remote. I&#39;m open to hybrid in the Metro Detroit area.=C2=A0</div><div><br></div><div>I&#39;m open to bonuses in the 5 to 10% range.=C2=A0</div><div><br></div><div><br clear=3D"all"></div><div><div dir=3D"ltr" class=3D"gmail_signature"><span style=3D"font-family:verdana,sans-serif">Regards, </span><br><br><i style=3D"font-family:verdana,sans-serif"><br>[REDACTED_NAME]</i></div></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Aug 3, 2026 at 11:51=E2=80=AFAM &lt;<a href=3D"mailto:mashoodsekinat@executivecareersconnect.com" rel=3D"noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">mashoodsekinat@executivecareersconnect.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div>Apologies regarding that, it&#39;s a=C2=A0 mistake on my end.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Kindly let me know your preferred location, bonus expectations and if you are currently targeting remote, hybrid and or onsite roles .</div><div dir=3D"auto">=C2=A0Once I have that ,it will help me navigate your target more precisely.</div><div><br></div><div><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 3 Aug 2026, 16:32 [REDACTED_NAME], &lt;<a href=3D"mailto:[REDACTED_EMAIL]" rel=3D"noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">[REDACTED_EMAIL]</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div>Your last email is a bit confusing counting the one before said this:</div><div><br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto">I recently came across a Senior Detection Engineer /=20
+Threat Research opportunity with a growing organization offering=20
+approximately $150K=E2=80=93$190K total compensation with remote/hybrid=20
+flexibility. Based on your experience building behavioral detections,=20
+threat intelligence integrations, SIEM engineering, detection tuning,=20
+and adversary focused research, I believe you could be an excellent fit.</div><div dir=3D"auto"><br></div><div dir=3D"auto">The
+ role focuses on detection engineering, threat research, SIEM=20
+optimization, threat hunting, MITRE ATT&amp;CK mapping, and=20
+collaborating with security operations teams to strengthen enterprise=20
+cyber defense areas that closely align with your expertise.</div></blockquote><div>=C2=A0</div><div><br></div><div><br clear=3D"all"></div><div><div dir=3D"ltr" class=3D"gmail_signature"><span style=3D"font-family:verdana,sans-serif">Regards, </span><br><br><i style=3D"font-family:verdana,sans-serif"><br>[REDACTED_NAME]</i></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Aug 3, 2026 at 11:05=E2=80=AFAM &lt;<a href=3D"mailto:mashoodsekinat@executivecareersconnect.com" rel=3D"noreferrer noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">mashoodsekinat@executivecareersconnect.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div>Great! Before we move forward, I&#39;d like to better understand your preferences so I can target the right opportunities.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Could you let me know:</div><div dir=3D"auto"><br></div><div dir=3D"auto">- Which role(s) are you most interested in (e.g., Accounts Receivable, Collections, Customer Service, Administrative Support, Training Coordinator, etc.)?</div><div dir=3D"auto">- Are there any specific companies you&#39;d like me to target on your behalf?</div><div dir=3D"auto"><br></div><div dir=3D"auto">This will help me focus on opportunities that best align with your goals.</div><div><br></div><div><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 3 Aug 2026, 15:43 [REDACTED_NAME], &lt;<a href=3D"mailto:[REDACTED_EMAIL]" rel=3D"noreferrer noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">[REDACTED_EMAIL]</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hi Mashood,<br><br>Expected salary range is $160,000/year.=C2=A0<br><br>Target level is Senior.<br><br>Thanks.<br><br><div>Regards,=C2=A0</div><div><br></div><div>[REDACTED_NAME]</div><div><div dir=3D"ltr" class=3D"gmail_signature"><br></div></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Aug 3, 2026 at 10:32=E2=80=AFAM &lt;<a href=3D"mailto:mashoodsekinat@executivecareersconnect.com" rel=3D"noreferrer noreferrer noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">mashoodsekinat@executivecareersconnect.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div>Thank you for your response. I&#39;m glad to hear that you&#39;re open to exploring this further.</div><div dir=3D"auto"><br></div><div dir=3D"auto">To help align you with the most relevant opportunities through my reverse recruiting support, could you please share the following:</div><div dir=3D"auto"><br></div><div dir=3D"auto">1. Expected salary range for your next role</div><div dir=3D"auto">2. Target level you are aiming for (e.g., Entry-Level, Mid-Level, Manager, Senior, or Executive)</div><div dir=3D"auto"><br></div><div dir=3D"auto">Once I receive that information, I&#39;ll be able to identify and share positions that best align with your background, experience, and career goals including the Senior Detection Engineer role I mentioned earlier.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Looking forward to your reply,</div><div><br></div><div><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, 3 Aug 2026, 15:18 [REDACTED_NAME], &lt;<a href=3D"mailto:[REDACTED_EMAIL]" rel=3D"noreferrer noreferrer noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">[REDACTED_EMAIL]</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hi Mashood,<br><br>I am interested in hearing more about this role.<br><br><div>Thanks.</div><div><br></div><div><br></div><div><div dir=3D"ltr" class=3D"gmail_signature"><span style=3D"font-family:verdana,sans-serif">Regards, </span><br><br><i style=3D"font-family:verdana,sans-serif"><br>[REDACTED_NAME]</i><br style=3D"font-family:verdana,sans-serif"><br></div></div><br></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, Aug 3, 2026 at 9:57=E2=80=AFAM &lt;<a href=3D"mailto:mashoodsekinat@executivecareersconnect.com" rel=3D"noreferrer noreferrer noreferrer noreferrer noreferrer noreferrer noreferrer" target=3D"_blank">mashoodsekinat@executivecareersconnect.com</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto"><div>Hi [REDACTED_NAME],</div><div dir=3D"auto"><br></div><div dir=3D"auto">I came across your profile and your background really stood out to me, especially your 13+ years of experience in detection engineering, threat research, SIEM engineering, threat hunting, and translating MITRE ATT&amp;CK techniques into production-ready detections. Your work across CrowdStrike Falcon, Microsoft Sentinel, Carbon Black, Sumo Logic Cloud SIEM, and your experience building scalable detection capabilities is particularly impressive.</div><div dir=3D"auto"><br></div><div dir=3D"auto">I work as a Reverse Recruiter, meaning I work directly for job seekers instead of companies. My role is to help professionals identify strong-fit opportunities, connect with hiring managers and recruiters, and improve their visibility throughout the hiring process rather than relying only on traditional online applications.</div><div dir=3D"auto"><br></div><div dir=3D"auto">I also help support the full application process strategically, including positioning, outreach, and application foundation tools designed to strengthen a candidate&#39;s chances of getting noticed.</div><div dir=3D"auto"><br></div><div dir=3D"auto">I recently came across a Senior Detection Engineer / Threat Research opportunity with a growing organization offering approximately $150K=E2=80=93$190K total compensation with remote/hybrid flexibility. Based on your experience building behavioral detections, threat intelligence integrations, SIEM engineering, detection tuning, and adversary focused research, I believe you could be an excellent fit.</div><div dir=3D"auto"><br></div><div dir=3D"auto">The role focuses on detection engineering, threat research, SIEM optimization, threat hunting, MITRE ATT&amp;CK mapping, and collaborating with security operations teams to strengthen enterprise cyber defense areas that closely align with your expertise.</div><div dir=3D"auto"><br></div><div dir=3D"auto">Would you be open to hearing more about it?</div><div><br></div><div><div dir=3D"ltr">Best Regards,<div><div style=3D"color:rgb(34,34,34)"><b>MASHOOD SEKINAT=C2=A0</b></div><div dir=3D"auto" style=3D"color:rgb(34,34,34)"><b>REVERSE RECRUITER | EXECUTIVE JOB SEARCH STRATEGIST | EXECUTIVE BRANDING SPEALCIALIST</b></div><b><font color=3D"#888888"></font></b><div><font color=3D"#888888"><br></font><br></div></div></div></div></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+</blockquote></div>
+
+--000000000000f3245f06582b684d--
